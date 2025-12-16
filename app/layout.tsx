@@ -38,11 +38,11 @@ export const metadata: Metadata = {
     title: "Nexia: Quality AI Platform for Reliable Workflows & Docs",
     description:
       "Stop betting on AI. Demand reliability. Nexia guarantees stability with Axle (workflows) and Docr (docs).",
-    url: "https://https://nexia.vercel.app", // Replace with your live domain
+    url: "https://https://nexiaspace.vercel.app", // Replace with your live domain
     siteName: "Nexia",
     images: [
       {
-        url: "/images/og-image.png", // Must be a high-quality, professional image/logo
+        url: "/banner.png", // Must be a high-quality, professional image/logo
         width: 1200,
         height: 630,
         alt: "Nexia: The Foundation for Confident Operations",
@@ -55,11 +55,11 @@ export const metadata: Metadata = {
   // 6. Twitter Card - Essential for X/Twitter sharing
   twitter: {
     card: "summary_large_image",
-    site: "@NexiaAI", // Replace with your X/Twitter handle
-    creator: "@NexiaAI", // Replace with your X/Twitter handle
+    site: "@nexiaspace", // Replace with your X/Twitter handle
+    creator: "@nexiaspace", // Replace with your X/Twitter handle
     title: "Nexia: Guaranteed Reliability in AI Workflows and Docs",
     description: "The quality-first platform: Axle (workflows) and Docr (docs) ensure operational confidence, not uncertainty.",
-    images: ["/images/og-image.png"],
+    images: ["/banner.png"],
   },
 
   // 7. Robots (Controls how search engines crawl your site)
