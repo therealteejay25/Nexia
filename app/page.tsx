@@ -3,7 +3,7 @@
 import { ArrowUpRightIcon, XLogoIcon } from "@phosphor-icons/react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, easeOut } from "framer-motion";
 
 export default function Home() {
   const containerVariants = {
@@ -24,7 +24,7 @@ export default function Home() {
       y: 0,
       transition: {
         duration: 0.5,
-        ease: [0, 0, 0.2, 1],
+        ease: easeOut,
       },
     },
   };
@@ -101,7 +101,10 @@ export default function Home() {
         <span className="text-base">Nexia&apos;s mission</span> is to eliminate
         operational uncertainty by providing the reliable,{" "}
         <span className="text-base">quality AI foundation</span> that allows teams
-        to <span className="text-base">build, automate, and scale with absolute confidence.</span>
+        to{" "}
+        <span className="text-base">
+          build, automate, and scale with absolute confidence.
+        </span>
       </motion.div>
     </motion.div>
   );
