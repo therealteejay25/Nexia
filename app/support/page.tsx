@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { ArrowUpRightIcon } from "@phosphor-icons/react";
-
+import { motion } from "framer-motion";
 const page = () => {
   const [loading, setLoading] = useState(false);
   const [modal, setModal] = useState<null | "success" | "error">();
@@ -35,21 +35,21 @@ const page = () => {
 
   return (
     <motion.div 
-      className=\"flex flex-col gap-6 pt-36 pb-6 h-full items-center\"
+      className="flex flex-col gap-6 pt-36 pb-6 h-full items-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
       <motion.div 
-        className=\"flex flex-col gap-5\"
+        className="flex flex-col gap-5"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1, duration: 0.5 }}
       >
-        <h1 className=\"text-dark text-center md:text-5xl text-3xl font-semibold\">
-          Join the movement for <span className=\"text-base\">reliable AI.</span>
+        <h1 className="text-dark text-center md:text-5xl text-3xl font-semibold">
+          Join the movement for <span className="text-base">reliable AI.</span>
         </h1>
-        <p className=\"text-dark/75 text-sm md:text-md mx-4 max-w-2xl text-center\">
+        <p className="text-dark/75 text-sm md:text-md mx-4 max-w-2xl text-center">
           We are a small, focused team building the platform we know the industry
           needs. Every action, no matter how small, helps us bring guaranteed
           quality to workflows and documentations.
@@ -57,7 +57,7 @@ const page = () => {
       </motion.div>
 
       <motion.form
-        className=\"max-w-3xl px-5.5 md:px-0 items-center flex flex-col gap-3 w-full\"
+        className="max-w-3xl px-5.5 md:px-0 items-center flex flex-col gap-3 w-full"
         onSubmit={sendEmail}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -100,19 +100,19 @@ const page = () => {
 
         <motion.button
           disabled={loading}
-          className=\"bg-base flex gap-2 mt-4 items-center rounded-full w-fit py-3 px-5 text-white cursor-pointer font-medium disabled:opacity-60\"
+          className="bg-base flex gap-2 mt-4 items-center rounded-full w-fit py-3 px-5 text-white cursor-pointer font-medium disabled:opacity-60"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          {loading ? <div className=\"loader\"></div> : \"Send\"}
+          {loading ? <div className="loader"></div> : "Send"}
           {!loading && (
-            <ArrowUpRightIcon className=\"text-white text-xl\" />
+            <ArrowUpRightIcon className="text-white text-xl" />
           )}
         </motion.button>
       </motion.form>
 
       <motion.div 
-        className=\"text-dark text-2xl md:text-3xl py-5 max-w-4xl font-medium text-center\"
+        className="text-dark text-2xl md:text-3xl py-5 max-w-4xl font-medium text-center"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.5 }}
@@ -129,13 +129,13 @@ const page = () => {
 
       {modal && (
         <motion.div 
-          className=\"fixed inset-0 backdrop-blur-md z-50 flex items-center justify-center bg-black/40\"
+          className="fixed inset-0 backdrop-blur-md z-50 flex items-center justify-center bg-black/40"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.2 }}
         >
           <motion.div 
-            className=\"bg-white shadow-2xl shadow-dark/10 border-4 border-black/3 rounded-3xl p-6 max-w-sm w-full mx-4 text-center flex flex-col gap-4\"
+            className="bg-white shadow-2xl shadow-dark/10 border-4 border-black/3 rounded-3xl p-6 max-w-sm w-full mx-4 text-center flex flex-col gap-4"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.3 }}
@@ -154,7 +154,7 @@ const page = () => {
 
             <motion.button
               onClick={() => setModal(null)}
-              className=\"bg-base rounded-full py-3 px-8 text-white font-medium w-fit mx-auto\"
+              className="bg-base rounded-full py-3 px-8 text-white font-medium w-fit mx-auto"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
